@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\InfoController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Определяем три GET-маршрута
+Route::get('/info/server', [InfoController::class, 'serverInfo']);
+Route::get('/info/client', [InfoController::class, 'clientInfo']);
+Route::get('/info/database', [InfoController::class, 'databaseInfo']);
