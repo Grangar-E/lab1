@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\DTO;
 
 use JsonSerializable;
@@ -12,7 +14,7 @@ readonly class ServerInfoDTO implements JsonSerializable
         public int $maxExecutionTime,
         public string $memoryLimit
     ) {}
-    
+
     public function jsonSerialize(): array
     {
         return [

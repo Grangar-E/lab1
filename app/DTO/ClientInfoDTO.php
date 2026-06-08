@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\DTO;
 
 use JsonSerializable;
@@ -10,7 +12,7 @@ readonly class ClientInfoDTO implements JsonSerializable
         public string $ipAddress,
         public string $userAgent
     ) {}
-    
+
     public function jsonSerialize(): array
     {
         return [

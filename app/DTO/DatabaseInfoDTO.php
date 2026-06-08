@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\DTO;
 
 use JsonSerializable;
@@ -11,7 +13,7 @@ readonly class DatabaseInfoDTO implements JsonSerializable
         public string $serverVersion,
         public string $databaseName
     ) {}
-    
+
     public function jsonSerialize(): array
     {
         return [
